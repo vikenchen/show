@@ -1,8 +1,8 @@
-<html class=" js flexbox no-flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg no-smil svgclippaths">
+﻿<html class=" js flexbox no-flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg no-smil svgclippaths">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陈如峰数据分析</title>
+    <title>链家二手房成交数据分析</title>
     <link href="static/content/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="static/content/site.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="static/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -14,6 +14,14 @@
         .fa{
             margin-right:2px;
         }
+        .jumbotron, .container, .body-content{
+            padding:15px,5px,5px,5px;
+        }
+        ul.txt {
+            list-style-type:decimal;
+            text-align: left;
+        }
+
     </style>
 </head>
 
@@ -25,26 +33,25 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/" class="navbar-brand">陈如峰数据分析</a>
+            <a href="#top" class="navbar-brand">链家二手房成交数据分析</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#Web_j" class="navb">Web</a></li>
-                <li><a href="#BI_j" class="navb">BI</a></li>
-                <li><a href="#SQL_j" class="navb">SQL</a></li>
-                <li><a href="#ml_j" class="navb">机器学习</a></li>
-                <li><a href="#office_j" class="navb">Office二次开发</a></li>
+                <li><a href="#j1" class="navb">成交量和价格分析</a></li>
+                <li><a href="#j2" class="navb">成交量&房价和区域分布的关系</a></li>
+                <li><a href="#j3" class="navb">房子属性</a></li>
+                <li><a id="view" class="navb btn" title="on">Text <i class="fa fa-toggle-on" aria-hidden="true"></i>On</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown" role="presentation">
                     <a class="dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown" style="color:white">
-                        <i class="fa fa-address-card-o" aria-hidden="true"></i>联系方式<span class="caret"></span>
+                        <i class="fa fa-address-card-o" aria-hidden="true"></i>陈如峰<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="mailto:s020400405@163.com"><i class="fa fa-envelope" aria-hidden="true"></i>s020400405@163.com</a></li>
                         <li class="divider" role="separator"></li>
-                        <li><a href="#">Phone: 13950109423</a></li>
+                        <li><a><i class="fa fa-phone" aria-hidden="true"></i>13950109423</a></li>
                     </ul>
                 </li>
             </ul>
@@ -54,35 +61,82 @@
 
     <div class="container body-content">
 
+        <div id="j1" class="jumbotron">
+            <h1>成交量和价格分析</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2><i class="fa fa-info-circle" aria-hidden="true"></i>数据 现象</h2>
+                    <ul class="txt">
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2><i class="fa fa-tasks" aria-hidden="true"></i>结论 建议</h2>
+                    <ul class="txt">
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ul>
+                </div>
 
-        <div class="jumbotron">
-            <h2>感谢您的信赖和观看, 真诚祝贺您和家人身体健康</h2>
-            <h5>因网络原因,下面内容可能无法及时显示,可以尝试刷新,感谢您的耐心</h5>
+            </div>
+            <h2>2020年成交分析</h2>
+            <img src="img/2020年成交总套数 月份.png" width="100%">
+            <img src="img/2020年均价 月份.png" width="100%">
+            <h2>往年成交分析</h2>
+            <img src="img/历年成交总套数 年份.png" width="100%">
+            <img src="img/历年成交均价 年份.png" width="100%">
         </div>
 
-        <div id="Web_j" class="jumbotron">
-            <h2>Python Web</h2>
-            <img src="img/python_web.gif" width="100%">
+        <div id="j2" class="jumbotron">
+            <h1>成交量&房价和区域分布的关系</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2><i class="fa fa-info-circle" aria-hidden="true"></i>数据 现象</h2>
+                    <ul class="txt">
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2><i class="fa fa-tasks" aria-hidden="true"></i>结论 建议</h2>
+                    <ul class="txt">
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ul>
+                </div>
+
+            </div>
+            <img src="img/2020年成交总套数超过50的地段.png" width="100%">
+            <img src="img/2020年均价超过5万的地段.png" width="100%">
         </div>
 
-        <div id="BI_j" class="jumbotron">
-            <h2>BI</h2>
-            <img src="img/BI.png" width="100%">
-        </div>
+        <div id="j3" class="jumbotron">
+            <h1>房子属性</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2><i class="fa fa-info-circle" aria-hidden="true"></i>数据 现象</h2>
+                    <ul class="txt">
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2><i class="fa fa-tasks" aria-hidden="true"></i>结论 建议</h2>
+                    <ul class="txt">
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ul>
+                </div>
 
-        <div id="SQL_j" class="jumbotron">
-            <h2>SQL</h2>
-            <img src="img/SQL.gif" width="100%">
-        </div>
-
-        <div id="ml_j" class="jumbotron">
-            <h2>机器学习</h2>
-            <img src="img/机器学习.gif" width="100%">
-        </div>
-
-        <div id="office_j" class="jumbotron">
-            <h2>Office软件二次开发</h2>
-            <img src="img/office软件二次开发.png" width="100%">
+            </div>
+            <img src="img/房子属性.png" width="100%">
         </div>
 
 
@@ -102,6 +156,21 @@
                 }, 1500);
                 return false;
             });
+
+            $("#view").click(function () {
+                $(".row").toggle();
+                if (this.title == 'on') {
+                    this.innerHTML = 'Text <i class="fa fa-toggle-off" aria-hidden="true"></i>Off';
+                    this.title = 'off'
+                }
+                else {
+                    this.innerHTML = 'Text <i class="fa fa-toggle-on" aria-hidden="true"></i>On';
+                    this.title = 'on'
+                }
+                    ;
+
+                        });
+
             //滚动条滚动到指定位置触发下面事件
             var getDiv_md = $(".div_md");
             var offSet = getDiv_md.offset().top;
@@ -121,8 +190,10 @@
                         "z-index": ""
                     });
                 }
-            })
+            });
+
         });
+
     </script>
 
 
