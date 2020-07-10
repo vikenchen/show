@@ -1,0 +1,207 @@
+﻿<html class=" js flexbox no-flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg no-smil svgclippaths">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈如峰数据分析</title>
+    <link href="static/content/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="static/content/site.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="static/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="static/scripts/modernizr-2.6.2.js"></script>
+    <style>
+        .jumbotron {
+            text-align: center;
+        }
+        .fa{
+            margin-right:2px;
+        }
+        .jumbotron, .container, .body-content{
+            padding:15px,5px,5px,5px;
+        }
+        ul.txt {
+            list-style-type:upper-roman;
+            text-align: left;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="show/index.html" class="navbar-brand">000</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#j1" class="navb">成交量和价格分析</a></li>
+                <li><a href="#j2" class="navb">成交量&房价和区域分布的关系</a></li>
+                <li><a href="#j3" class="navb">房子属性</a></li>
+                <li><a id="view" class="navb btn" title="on">Text <i class="fa fa-toggle-on" aria-hidden="true"></i>On</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown" role="presentation">
+                    <a class="dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown" style="color:white">
+                        <i class="fa fa-address-card-o" aria-hidden="true"></i>陈如峰<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mailto:s020400405@163.com"><i class="fa fa-envelope" aria-hidden="true"></i>s020400405@163.com</a></li>
+                        <li class="divider" role="separator"></li>
+                        <li><a><i class="fa fa-phone" aria-hidden="true"></i>13950109423</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="container body-content">
+
+        <div id="j1" class="jumbotron">
+            <h1>成交量和价格分析</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2><i class="fa fa-info-circle" aria-hidden="true"></i>数据 现象</h2>
+                    <ul class="txt">
+                        <li>图1, 各区域成交分布无明显变化</li>
+                        <li>图1, 受疫情和春节影响,2月份销售量很低,四五月份反弹明显</li>
+                        <li>图2, 今年均价在疫情和春节见底,随后小幅反弹</li>
+                        <li>图3, 今年截止7月份,成交总量已占2019年的约7成左右, 尤其思明和翔安已经快和去年持平</li>
+                        <li>图4, 相比较去年,均价基本持平</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2><i class="fa fa-tasks" aria-hidden="true"></i>结论 建议</h2>
+                    <ul class="txt">
+                        <li>今年虽有严重疫情, 但二手房交易市场未受影响,还有上涨趋势</li>
+                        <li>今年各区的全年成交总量极有可能超过2019年</li>
+                    </ul>
+                </div>
+
+            </div>
+            <h2>2020年成交分析</h2>
+            <img src="img/2020年成交总套数 月份.png" width="100%">
+            <img src="img/2020年均价 月份.png" width="100%">
+            <h2>往年成交分析</h2>
+            <img src="img/历年成交总套数 年份.png" width="100%">
+            <img src="img/历年成交均价 年份.png" width="100%">
+        </div>
+
+        <div id="j2" class="jumbotron">
+            <h1>成交量&房价和区域分布的关系</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2><i class="fa fa-info-circle" aria-hidden="true"></i>数据 现象</h2>
+                    <ul class="txt">
+                        <li>图1, 各区域都有成交量较高的地段, 思明区最多</li>
+                        <li>图1, 成交量分布排序: 思明, 湖里, 海沧, 集美, 同安, 翔安</li>
+                        <li>图2, 均价超过5W的区域全部在岛内,除了湖里五缘湾和观音山,其余都在思明区</li>
+                        <li>图2&3, 2W-5W的房子是成交主力, 2W-4W主要在岛外,4W以上几乎在岛内</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2><i class="fa fa-tasks" aria-hidden="true"></i>结论 建议</h2>
+                    <ul class="txt">
+                        <li>成交量受区域影响不大(按岛内和岛外分), 各自满足不通需求的购房者</li>
+                        <li>均价受区域影响非常大, 高房价地段都在岛内著名学区和商圈</li>
+                    </ul>
+                </div>
+
+            </div>
+            <img src="img/2020年成交总套数超过50的地段.png" width="100%">
+            <img src="img/2020年均价超过5万的地段.png" width="100%">
+            <img src="img/均价范围分布 区域.png" width="100%">
+            
+        </div>
+
+        <div id="j3" class="jumbotron">
+            <h1>房子属性</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2><i class="fa fa-info-circle" aria-hidden="true"></i>数据 现象</h2>
+                    <ul class="txt">
+                        <li>图1, 2室和3室是成交主力</li>
+                        <li>图2, 房龄10年以上是成交主力</li>
+                        <li>图3, 有装修的房子是成交主力</li>
+                        <li>图4, 中高楼层的房子是成交主力</li>
+                        <li>图5, 南北朝向的房子是成交主力</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2><i class="fa fa-tasks" aria-hidden="true"></i>结论 建议</h2>
+                    <ul class="txt">
+                        <li>房子成交难易程度跟户型, 房龄, 装修, 楼层, 朝向均有一定强关系</li>
+                        <li>户型, 装修和朝向应该是决定房子交易难易程度的主要因素</li>
+                        <li>即使是20年以上的老房子, 依然有很大的市场需求</li>
+                    </ul>
+                </div>
+
+            </div>
+            <img src="img/房子属性.png" width="100%">
+        </div>
+
+
+        <footer>
+        </footer>
+    </div>
+
+    <script src="static/scripts/jquery-1.10.2.js"></script>
+    <script src="static/scripts/bootstrap.js"></script>
+    <script src="static/scripts/respond.js"></script>
+
+    <script>
+        $(function () {
+            $("#navb").click(function () {
+                $("html, body").animate({
+                    scrollTop: $($(this).attr("href")).offset().top - 100 + "px"
+                }, 1500);
+                return false;
+            });
+
+            $("#view").click(function () {
+                $(".row").toggle();
+                if (this.title == 'on') {
+                    this.innerHTML = 'Text <i class="fa fa-toggle-off" aria-hidden="true"></i>Off';
+                    this.title = 'off'
+                }
+                else {
+                    this.innerHTML = 'Text <i class="fa fa-toggle-on" aria-hidden="true"></i>On';
+                    this.title = 'on'
+                }
+                    ;
+
+                        });
+
+            //滚动条滚动到指定位置触发下面事件
+            var getDiv_md = $(".div_md");
+            var offSet = getDiv_md.offset().top;
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > offSet) {
+                    $(".div_md").css({
+                        "position": "fixed",
+                        "left": "10px",
+                        "top": "10px",
+                        "z-index": "2"
+                    });
+                } else {
+                    $(".div_md").css({
+                        "position": "",
+                        "left": "0px",
+                        "top": "",
+                        "z-index": ""
+                    });
+                }
+            });
+
+        });
+
+    </script>
+
+
+</body>
+</html>
