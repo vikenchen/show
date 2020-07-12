@@ -32,24 +32,26 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#top" class="navbar-brand">主页 技能分享<span style="font-size:xx-small; color:red"> 图片加载可能较慢,请见谅</span></a>
+            <a href="#top" class="navbar-brand">导航</a>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown" role="presentation">
+                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" style="color:white" href="#">
+                        <i class="fa fa-link" aria-hidden="true"></i><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a id="zhjn" class="nav_li btn"><i class="fa fa-link" aria-hidden="true"></i>综合: Python Web, 可视化, SQL, Office开发</a></li>
+                        <li class="divider" role="separator"></li>
+                        <li><a id="lianjia" class="nav_li btn"><i class="fa fa-link" aria-hidden="true"></i>案例-地产数据分析: 爬虫 清洗 BI</a></li>
+                        <li class="divider" role="separator"></li>
+                        <li><a id="xgboost" class="nav_li btn"><i class="fa fa-link" aria-hidden="true"></i>机器学习Xgboost</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
 
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown" role="presentation">
-                    <a class="dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown" style="color:white">
-                        <i class="fa fa-link" aria-hidden="true"></i>导航<span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a id="zhjn" class="nav_li btn"><i class="fa fa-home" aria-hidden="true"></i>主页 技能分享</a></li>
-                        <li class="divider" role="separator"></li>
-                        <li><a id="lianjia" class="nav_li btn"><i class="fa fa-paragraph" aria-hidden="true"></i>案例 地产数据分析</a></li>
-                    </ul>
-                </li>
-            </ul>
-
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown" role="presentation">
                     <a class="dropdown-toggle" role="button" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown" style="color:white">
@@ -67,37 +69,41 @@
     </div>
 
     <div class="container body-content">
+        <div class="jumbotron">
+            <h1>感谢您的阅读</h1>
+            <h2>请选择导航对应的链接, 阅读对应的页面</h2>
+            <p>图片加载可能较慢,请见谅</p>
 
-    </div>
+            </div>
 
-    <script src="static/scripts/jquery-1.10.2.js"></script>
-    <script src="static/scripts/bootstrap.js"></script>
-    <script src="static/scripts/respond.js"></script>
+            <script src="static/scripts/jquery-1.10.2.js"></script>
+            <script src="static/scripts/bootstrap.js"></script>
+            <script src="static/scripts/respond.js"></script>
 
-    <script>
-        $(function () {
-            $("#navb").click(function () {
-                $("html, body").animate({
-                    scrollTop: $($(this).attr("href")).offset().top - 100 + "px"
-                }, 1500);
-                return false;
-            });
+            <script>
+                $(function () {
+                    $("#navb").click(function () {
+                        $("html, body").animate({
+                            scrollTop: $($(this).attr("href")).offset().top - 100 + "px"
+                        }, 1500);
+                        return false;
+                    });
 
-            $(".nav_li").click(function () {            
-                var html_case = $(this).attr('id');
-                $(".body-content").load("case/"+ html_case +".html");
-                //$(".body-content").hide();
-                //$(a).load("case/lianjia.html")
-                //$(a).show();
-                $("body,html").animate({ scrollTop: 0 }, 500);
-            });
+                    $(".nav_li").click(function () {
+                        var html_case = $(this).attr('id');
+                        $(".body-content").load("case/" + html_case + ".html");
+                        //$(".body-content").hide();
+                        //$(a).load("case/lianjia.html")
+                        //$(a).show();
+                        $("body,html").animate({ scrollTop: 0 }, 500);
+                    });
 
-            $(".nav_li").click(function () {
-                $(".navbar-brand").text($(this).text());
-            });
+                    $(".nav_li").click(function () {
+                        $(".navbar-brand").text($(this).text());
+                    });
 
-        });
-    </script>
+                });
+            </script>
 
 
 </body>
